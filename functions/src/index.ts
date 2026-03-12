@@ -1,0 +1,1 @@
+export { processFontImage } from "./processImage";

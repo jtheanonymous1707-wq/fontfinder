@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: oklch(0.97 0.01 263);
+  --color-brand-100: oklch(0.93 0.03 263);
+  --color-brand-200: oklch(0.87 0.06 263);
+  --color-brand-300: oklch(0.79 0.1 263);
+  --color-brand-400: oklch(0.7 0.15 263);
+  --color-brand-500: oklch(0.6 0.2 263);
+  --color-brand-600: oklch(0.5 0.25 263);
+  --color-brand-700: oklch(0.4 0.2 263);
+  --color-brand-800: oklch(0.3 0.15 263);
+  --color-brand-900: oklch(0.2 0.1 263);
+  --color-brand-950: oklch(0.1 0.05 263);
+  
+  --animate-shimmer: shimmer 2s linear infinite;
+  @keyframes shimmer {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
+  }
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth antialiased;
+  }
+
+  body {
+    @apply bg-white text-gray-900 font-sans;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Shimmer skeleton */
+  .skeleton {
+    @apply bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 bg-[length:200%_100%] animate-shimmer rounded-lg;
+  }
+
+  /* Glass card */
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/50;
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-600 to-violet-500 bg-clip-text text-transparent;
+  }
+}
+
+/* Add to globals.css (from Step 11) */
+.bg-checkered {
+  background-image:
+    linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
+    linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
+    linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}

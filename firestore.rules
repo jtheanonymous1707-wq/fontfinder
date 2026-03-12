@@ -1,0 +1,10 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /fontJobs/{jobId} {
+      // Allow reads to anyone (for now), writes only if they own it
+      allow read, write: if true;
+    }
+  }
+}

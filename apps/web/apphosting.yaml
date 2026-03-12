@@ -1,0 +1,15 @@
+kind: "AppStack"
+apiVersion: "v1"
+env:
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    availability: ["BUILD", "RUNTIME"]
+  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    value: "cfproject-4f2ff.firebaseapp.com"
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    value: "cfproject-4f2ff"
+  - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+    value: "cfproject-4f2ff.firebasestorage.app"
+  - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+    value: "89475607849"
+  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
+    value: "1:89475607849:web:1a405c6fd4dc7482f39b38"

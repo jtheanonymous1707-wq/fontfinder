@@ -1,0 +1,74 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Next.js
+.next/
+out/
+
+# Production
+build/
+
+# Misc
+.DS_Store
+*.pem
+*.json
+!package.json
+!tsconfig.json
+!firebase.json
+!next.config.json
+!firestore.indexes.json
+!apphosting.yaml
+!next.config.ts
+!eslint.config.mjs
+!postcss.config.mjs
+!tailwind.config.ts
+!*.md
+!*.css
+!*.js
+!*.ts
+!*.tsx
+!*.html
+!*.txt
+!*.py
+!*.sh
+!Dockerfile
+!.dockerignore
+!*.yaml
+!*.yml
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env*.local
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Firebase
+.firebase/
+firebase-debug.log*
+.runtimeconfig.json
+
+# Large ML files
+*.keras
+*.tflite
+*.zip
+dataset/
+fonts/
+inference-service/models/
+ml/test_images/
+inference-service/.venv*/
+inference-service/__pycache__/
+inference-service/*.pyc
